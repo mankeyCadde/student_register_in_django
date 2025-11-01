@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add Student</title>
+</head>
+<body>
+    <h1>Add Student</h1>
+    <form method="POST">
+        {% csrf_token %}
+        name: <input type="text" name="name"><br>
+        Email: <input type="email" name="email"><br>
+        Age: <input type="number" name="age"><br>
+        course: <input type="text" name="course"><br>
+        <button type="submit">Save</button>
+
+    </form>
+    <a href="{%url 'student_list' %}">Back</a>
+    
+</body>
+</html>
